@@ -6,6 +6,8 @@
 
 > We will learn to make Buttons, Slash Commands, Events, Menus, Music and much more!
 
+## []()
+
 # TABLE OF CONTENTS!
 
 > Note the first 6 Tutorials are not having a Github Repositry due to not needed!
