@@ -1,3 +1,4 @@
+const Discord = require("discord.js");
 function escapeRegex(str){
     return str.replace(/[.*+?^${}()|[\]\\]/g, `\\$&`);
 }
