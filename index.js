@@ -1,8 +1,11 @@
 const Discord = require("discord.js");
 const config = require("./config.json");
+const Enmap = require("enmap");
 const fs = require("fs");
 const { ClientOptions } = require("./utils/clientOptions.js");
 const client = new Discord.Client(ClientOptions); //constant ... not changeable
+//Make a database
+client.settings = new Enmap( { name: "Settings-Database", dataDir: "./databases/settings"  } );
 //Create Slash Commands Object
 client.allSlashCommands = [];
 require("./utils/slashCommandsBuilder.js")(client);
