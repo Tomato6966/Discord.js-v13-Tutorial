@@ -18,5 +18,6 @@
 - [Tutorial #4 | **Using the Botping as a Prefix! SHOWING PREFIX HELP**](https://www.youtube.com/watch?v=XWbabCxQgcA&list=PLbLeA7W1w2T6pmjCmbVP4TS1Y1znvTOA1&index=4&t=101s) | 💪 [Youtube Tutorial](https://www.youtube.com/watch?v=XWbabCxQgcA&list=PLbLeA7W1w2T6pmjCmbVP4TS1Y1znvTOA1&index=4&t=101s)
 - [Tutorial #5 | **Making a basic Command / Event / Module Handler**](https://github.com/Tomato6966/Discord.js-v13-Tutorial/tree/Tutorial-%235) | 💪 [Youtube Tutorial](https://www.youtube.com/watch?v=kHv8-hYG5MM&list=PLbLeA7W1w2T6pmjCmbVP4TS1Y1znvTOA1&index=6&t=23s)
 - [Tutorial #6 | **Guild specific Settings (custom Prefix)**](https://github.com/Tomato6966/Discord.js-v13-Tutorial/tree/Tutorial-%236) | 💪 [Youtube Tutorial]()
-- [Tutorial #7 | **Learning Discord-Buttons & Menus**](https://github.com/Tomato6966/Discord.js-v13-Tutorial/tree/Tutorial-%237) | 💪 [Youtube Tutorial]()
-- [Tutorial #8 | **Starting the Music System**](https://github.com/Tomato6966/Discord.js-v13-Tutorial/tree/Tutorial-%238) | 💪 [Youtube Tutorial]()
+- [Tutorial #7 | **Cool Help Message**](https://github.com/Tomato6966/Discord.js-v13-Tutorial/tree/Tutorial-%237) | 💪 [Youtube Tutorial]()
+- [Tutorial #8 | **Learning Discord-Buttons & Menus**](https://github.com/Tomato6966/Discord.js-v13-Tutorial/tree/Tutorial-%238) | 💪 [Youtube Tutorial]()
+- [Tutorial #9 | **Starting the Music System**](https://github.com/Tomato6966/Discord.js-v13-Tutorial/tree/Tutorial-%239) | 💪 [Youtube Tutorial]()
