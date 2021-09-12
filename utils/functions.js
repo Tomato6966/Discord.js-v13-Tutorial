@@ -11,6 +11,7 @@ function generateHelpEmbed(guild){
         {name: "**ping**", value: `> *Shows the Ping of me.*`, inline: true},
         {name: "**help**", value: `> *Gives you help!*`, inline: true},
         {name: "**deploy**", value: `> *Adds the Slash Commands to this Server*`, inline: true},
+        {name: "**prefix**", value: `> *Changes the Prefix of your Server*`, inline: true},
     ])
     .setFooter(guild.name, guild.iconURL({dynamic: true}));
 }
