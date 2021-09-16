@@ -29,6 +29,76 @@ module.exports = client => {
         }
         if(cmd){
             switch(cmd){
+                case "button":
+                {
+                    let ourfirstButton = new Discord.MessageButton()
+                        .setStyle("PRIMARY")
+                        .setLabel("What ever!".substr(0, 25))
+                        .setCustomId("1_1")
+                        .setEmoji("😎")
+                    let space = new Discord.MessageButton()
+                            .setStyle("SECONDARY")
+                            .setLabel("\u200b".substr(0, 25))
+                            .setCustomId("1_2")
+                            .setDisabled()
+                    let DiscordServer = new Discord.MessageButton()
+                        .setStyle("LINK")
+                        .setURL("https://discord.gg/milrato")
+                        .setLabel("Server")
+                        .setEmoji("888084918050107452")
+                    let manuoptions = [
+                        {
+                            label: "Option #1",
+                            description: "This is the first clickable Option!",
+                            value: "first_option",
+                            emoji: "888084918050107452"
+                        },
+                        {
+                            label: "Option #2",
+                            description: "This is the second clickable Option!",
+                            value: "second_option",
+                            emoji: "😎"
+                        },
+                        {
+                            label: "Option #3",
+                            description: "This is the third clickable Option!",
+                            value: "third_option",
+                        }
+                    ]
+                    let firstMenu = new Discord.MessageSelectMenu()
+                    .setCustomId("2_1")
+                    .setPlaceholder("Click me to select smt!")
+                    .addOptions(manuoptions)
+                    const row = new Discord.MessageActionRow() //5 rows / message
+                        .addComponents([
+                            ourfirstButton, space, DiscordServer //max. 5 buttons / row
+                        ])
+                    const row2 = new Discord.MessageActionRow()
+                        .addComponents([
+                            firstMenu
+                        ])
+                    await message.reply({ 
+                        content: "Yeah!", 
+                        embeds: [new Discord.MessageEmbed().setColor("BLURPLE").setTitle("Button- & Menu-Example")],
+                        components: [row, row2]
+                    })
+
+                    //Button collector
+                    const collector = message.channel.createMessageComponentCollector({ 
+                        filter: interaction => (interaction.isButton() || interaction.isSelectMenu()) && interaction.message.author.id == client.user.id,
+                    })
+                    collector.on("collect", (interaction) => {
+                        if(interaction.customId == "1_1"){
+                            interaction.reply({ content: "Button Clicked!", ephemeral: true });
+                        }
+                        if(interaction.customId == "2_1"){
+                            let value = interaction.values[0];
+                            let data = manuoptions.find(d=>d.value == value);
+                            interaction.reply({ content: "Menu Clicked!\n\n```" + JSON.stringify(data)+ "```", ephemeral: true });
+                        }
+                    });
+                }
+                break;
                 case "prefix": 
                 {
                     if(!message.member.permissions.has(Discord.Permissions.FLAGS.MANAGE_GUILD)){
