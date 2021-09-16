@@ -99,6 +99,19 @@ module.exports = client => {
                     });
                 }
                 break;
+                case "userinfo": 
+                {
+                    let member = message.mentions.members.first() || message.member;
+                    let embed = new Discord.MessageEmbed()
+                    .setColor(member.roles.highest.id != message.guild.id ? member.roles.highest.hexColor : `BLUE`)
+                    .setTitle(`${member.user.tag} Information`)
+                    .setThumbnail(member.user.displayAvatarURL({dynamic: true}))
+                    .setFooter(`ID: ${member.id}`, member.user.displayAvatarURL({dynamic: true}))
+                    .addField("Nickname:", member.nickname ? member.nickname : member.user.username)
+
+                    message.channel.send({embeds:  [embed]});
+                }
+                break;
                 case "prefix": 
                 {
                     if(!message.member.permissions.has(Discord.Permissions.FLAGS.MANAGE_GUILD)){
