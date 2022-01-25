@@ -2,7 +2,7 @@
 
 > In this Tutorial Series you will learn to code your very own Discord Bot!
 
-> It is up to Date to the latest Discord.js Version: **v13** and uses [nodjs v16.6+](https://nodejs.org)
+> It is up to Date to the latest Discord.js Version: **v13** and uses [nodejs v16.6+](https://nodejs.org)
 
 > We will learn to make Buttons, Slash Commands, Events, Menus, Music and much more!
 
